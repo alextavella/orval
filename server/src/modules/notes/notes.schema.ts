@@ -1,4 +1,4 @@
-import { z } from 'zod'
+import { inputSchema, outputSchema } from './notes.usecase'
 
 export const createNoteSchema = {
   schema: {
@@ -6,8 +6,9 @@ export const createNoteSchema = {
     tags: ['Notes'],
     summary: 'notes',
     operationId: 'createNote',
-    body: z.object({
-      message: z.string(),
-    }),
+    body: inputSchema,
+    response: {
+      201: outputSchema,
+    },
   },
 }

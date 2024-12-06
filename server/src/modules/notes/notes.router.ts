@@ -1,5 +1,5 @@
 import type { FastifyPluginAsyncZod } from 'fastify-type-provider-zod'
-import { createNoteSchema } from './notes.types'
+import { createNoteSchema } from './notes.schema'
 import { createNote } from './notes.usecase'
 
 export const notesRouter: FastifyPluginAsyncZod = async app => {
