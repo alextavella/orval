@@ -6,6 +6,8 @@
 pnpm dev
 ```
 
+Open [http://localhost:3333/docs/](http://localhost:3333/docs/) with your browser to see the result.
+
 ## Drizzle
 
 ### Generate migrations:
