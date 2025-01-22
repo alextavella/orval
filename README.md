@@ -11,3 +11,9 @@ pnpm dev:server
 ```bash
 pnpm dev:client
 ```
+
+## Running Orval
+
+```bash
+pnpm dev:client:generate
+```
