@@ -1,12 +1,10 @@
 {
   "name": "orval",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "author": "alextavella",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+    "dev": "pnpm run /^dev:/",
+    "dev:client": "pnpm --filter client dev",
+    "dev:server": "pnpm --filter server dev"
+  }
 }

@@ -34,7 +34,7 @@ export const startOpenApi = (app: FastifyInstance) => {
   const yaml = app.swagger({ yaml: true })
 
   if (typeof yaml === 'string') {
-    const output = resolve(__dirname, '../../..', 'docs', 'openapi.yaml')
+    const output = resolve(__dirname, '../../../..', 'api', 'openapi.yaml')
     writeFileSync(output, yaml)
   }
 }
