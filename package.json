@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "pnpm run /^dev:/",
     "dev:client": "pnpm --filter client dev",
+    "dev:client:generate": "pnpm --filter client generate",
     "dev:server": "pnpm --filter server dev"
   }
 }
