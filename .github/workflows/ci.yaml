@@ -1,0 +1,39 @@
+on:
+  push:
+    branches: [dev]
+  # pull_request:
+  #   branches: [dev]
+  #   types: [opened, synchronize, reopened]
+
+name: SonarQube Scan
+jobs:
+  sonarqube:
+    name: SonarQube Trigger
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checking out
+        uses: actions/checkout@v4
+        with:
+          # Disabling shallow clone is recommended for improving relevancy of reporting
+          fetch-depth: 0
+          # ref: ${{ github.head_ref}}
+
+      # - name: Set up Node.js
+      #   uses: actions/setup-node@v3
+      #   with:
+      #     node-version: '22'
+      #     cache: 'pnpm'
+      # - uses: pnpm/action-setup@v2
+      #   with:
+      #     version: 9.15.1
+      #     run_install: false
+      # - name: Install dependencies
+      #   run: pnpm install --frozen-lockfile
+      - name: SonarQube Scan
+        uses: sonarsource/sonarcloud-github-action@v4.0.0 # See the latest version at https://github.com/marketplace/actions/sonarcloud-scan
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        # with:
+        #   args: >
+        #     -Dsonar.organization=Alex Tavella
+        #     -Dsonar.projectKey=alextavella
