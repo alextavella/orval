@@ -6,6 +6,9 @@
     "dev": "pnpm run /^dev:/",
     "dev:client": "pnpm --filter client dev",
     "dev:client:generate": "pnpm --filter client generate",
-    "dev:server": "pnpm --filter server dev"
+    "dev:server": "pnpm --filter server dev",
+    "build": "pnpm run /^build:/",
+    "build:client": "pnpm --filter client build",
+    "build:server": "pnpm --filter server build"
   }
 }
