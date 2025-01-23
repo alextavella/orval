@@ -6,6 +6,18 @@ export default defineConfig({
     globals: true,
     environment: 'node',
     setupFiles: './vitest.setup.ts',
+    coverage: {
+      provider: 'v8',
+      reporter: ['text', 'lcov'],
+      reportsDirectory: './coverage',
+      include: ['**/modules/**/*.usecase.ts'],
+      threshold: {
+        statements: 80,
+        branches: 80,
+        functions: 80,
+        lines: 80,
+      }
+    },
   },
   environments: {
     DB_FILE_NAME: 'file:local.db'
