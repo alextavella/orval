@@ -1,9 +1,11 @@
 on:
-  push:
+  workflow_dispatch:
+  pull_request:
     branches: [dev]
-  # pull_request:
-  #   branches: [dev]
-  #   types: [opened, synchronize, reopened]
+    types: [opened, synchronize, reopened]
+    paths:
+      - '**/src/**/*.ts'
+      - '**/src/**/*.tsx'
 
 name: SonarQube Scan
 
@@ -21,7 +23,6 @@ jobs:
         with:
           # Disabling shallow clone is recommended for improving relevancy of reporting
           fetch-depth: 0
-          # ref: ${{ github.head_ref}}
 
       - uses: pnpm/action-setup@v4
         with:
