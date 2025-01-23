@@ -6,6 +6,11 @@ on:
   #   types: [opened, synchronize, reopened]
 
 name: SonarQube Scan
+
+permissions:
+  contents: read
+  pull-requests: write
+
 jobs:
   sonarqube:
     name: SonarQube Trigger
