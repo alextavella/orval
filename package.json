@@ -9,6 +9,13 @@
     "dev:server": "pnpm --filter server dev",
     "build": "pnpm run /^build:/",
     "build:client": "pnpm --filter client build",
-    "build:server": "pnpm --filter server build"
+    "build:server": "pnpm --filter server build",
+    "test": "pnpm run /^test:/",
+    "test:client": "pnpm --filter client test",
+    "test:server": "pnpm --filter server test"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.3.0",
+    "vitest": "^3.0.4"
   }
 }
