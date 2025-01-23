@@ -6,14 +6,18 @@
 pnpm dev:server
 ```
 
+## Running Orval
+
+```bash
+pnpm dev:client:generate
+```
+
 ## Running Client
 
 ```bash
 pnpm dev:client
 ```
 
-## Running Orval
+## SonarCloud
 
-```bash
-pnpm dev:client:generate
-```
+[https://sonarcloud.io/projects](https://sonarcloud.io/projects)
